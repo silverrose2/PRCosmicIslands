@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;// This is a better method same as enefollowpalyerorig use but as opposed to original script takes in to account obstaclts
 
-
-
 public class EnemyfollowNavtype2PR : MonoBehaviour
 { 
 
 private Transform playerTransform;
-
 private NavMeshAgent nav;
 
 
