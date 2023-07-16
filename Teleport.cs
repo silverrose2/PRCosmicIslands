@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TeleportPRTEST : MonoBehaviour
+public class Teleport : MonoBehaviour
 {
 
     private Transform player;
