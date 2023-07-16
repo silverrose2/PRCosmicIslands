@@ -41,30 +41,17 @@ public class PlayerhealthPR : MonoBehaviour// tip always call functions in the r
     [Tooltip("Femalefighter2")]// Opsive API ref
     [SerializeField] protected GameObject m_Character;// Opsive API ref
     public int Livesdeducted = 0;// new
-
-
     public GameObject Player;// To vanish at start 
-
     public GameObject Heightdamage;// new damage from height set active false on start
-
     public GameObject Life1;//
     public GameObject Life2;//
     public GameObject Life3;// new
-
-
     private int Healthtogive;// made vairable but not public as its a fixed number wich a calculation
-
     public int Applehealth;// just an empty number to work with
-
     public GameObject Enemyshootercontrol;// when player dead enemy needs to stop fire to prevent further damage on respawn drag enemy bullet in here gets dsiabled   
-
 
     void Start()
     {
-
-      
-
-
         Enemyshootercontrol.SetActive(true);
         Player.SetActive(false);
         Gameover.enabled = false;
@@ -90,8 +77,6 @@ public class PlayerhealthPR : MonoBehaviour// tip always call functions in the r
         healthBar.value = playerMaxHealth;//health bar links to above 
         healthBar.value = playerCurrentHealth;
         //GetComponent<UltimateCharacterLocomotion>().GravityAmount=(2f);//.gravity(8); ******************* Gravity control
-
-
         // anim.SetInteger("Condition", 1); 
         //test
     }
@@ -100,11 +85,7 @@ public class PlayerhealthPR : MonoBehaviour// tip always call functions in the r
     void Update()
 
     {
-
-
         {
-
-
             Healthtogive = playerCurrentHealth - playerMaxHealth;// new  always being caluculated  not just on start as changes. Basically I added this as a method to caclulate rather than just apply healh
         }// by looking at the 2 varialbes decalred playermax health and player current health I used this to form the calculation. PR This part is my idea implmented to avoid going over max.
 
@@ -112,7 +93,6 @@ public class PlayerhealthPR : MonoBehaviour// tip always call functions in the r
         {
             SceneManager.LoadScene(0);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
-
         }
         if (Input.GetKeyDown(KeyCode.R))// format for input on key down .A,.B,.Escape, etc...
         {
@@ -139,12 +119,9 @@ public class PlayerhealthPR : MonoBehaviour// tip always call functions in the r
         //(other.gameObject.name == "Dan")
         if (other.tag == "Apple" && playerCurrentHealth < 1000)
         {
-
             GetComponent<PlayerhealthPR>().HurtPlayer(Healthtogive);//Th take off other as its now part of health is  a calculation now going on
-
         }
-
-
+     
         if (playerCurrentHealth < 0 && !isDead) // added health to reverse put back line below***
                                                 // if (other.tag == "Player destroy" && !isDead) // if player is dead 'tag condition' the following function below happen
         {
@@ -185,10 +162,7 @@ public class PlayerhealthPR : MonoBehaviour// tip always call functions in the r
                 //cc.enabled = false;GameObject.FindGameObjectWithTag("Player").SetActive(false);
                 //  EventHandler.ExecuteEvent(Player, "OnEnableGameplayInput", false);// ****new freeze player input
                ScorePR.scoreValue = 0;// **on death value =0 disalbe this is you want to keep the score running also add another if you want x 2 score sytems one for levels one for keeping track remove if needed)
-
                
-
-
             }
 
             IEnumerator delay(int v) // need to switch off respawn
@@ -225,17 +199,13 @@ public class PlayerhealthPR : MonoBehaviour// tip always call functions in the r
                 if (Livesdeducted == 1)
                 {
                     Life3.SetActive(false);
-                    isDead = false;
-
-                   
+                    isDead = false;  
                 }
 
                 if (Livesdeducted == 2)
                 {
                     Life2.SetActive(false);
                     isDead = false;
-                 
-
                 }
 
                 if (Livesdeducted == 3)
