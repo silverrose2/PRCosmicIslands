@@ -14,7 +14,7 @@ public class Teleport : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)// action should trigger any time as has if statement
+    private void OnTriggerEnter(Collider other)// 
     {
         if (other.gameObject.CompareTag("Player"))// 
         {
