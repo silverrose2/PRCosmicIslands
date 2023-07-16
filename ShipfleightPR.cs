@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class ShipfleightPR : MonoBehaviour
+public class ShipfleightPR : MonoBehaviour // This is an IEnumerator Statemachine
 {
     public GameObject Clouds1;
     public GameObject Clouds2;
