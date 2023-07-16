@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// note this enemy follow script works best alternating with nav mesh random movement. **
+// This is to assist keeping enemies apart. Note this enemy follow script alternating with nav mesh random movement. **
 public class Enemyavoid : MonoBehaviour
 {
 
