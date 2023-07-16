@@ -3,12 +3,11 @@ using System.Collections;
 using TMPro;//
 using UnityEngine.SceneManagement;
 
-public class Endgamedialoguepr : MonoBehaviour
+public class Endgamedialoguepr : MonoBehaviour// This script control when text should be active or false over a time delay
 {
     public TextMeshProUGUI Text1;
   
     Vector3 direction;// need to do the same for ai code where i enumerator is used check dialogue text to to see if this is effected and all other parts
-
 
     private void Start()
     {
