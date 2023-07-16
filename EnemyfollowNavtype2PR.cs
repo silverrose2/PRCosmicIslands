@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;// This is a better method same as enefollowpalyerorig use but as opposed to original script takes in to account obstaclts
+using UnityEngine.AI;// This is similar to Enemyfollowplayer script used but as opposed to original script takes in to account obstacle avoidance
 
 public class EnemyfollowNavtype2PR : MonoBehaviour
 { 
